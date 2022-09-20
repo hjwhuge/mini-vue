@@ -9,7 +9,7 @@
     "build:type": "tsc -p ./tsconfig.type.json",
     "test": "jest --no-cache"
   },
-  "author": "zenoslin",
+  "author": "hjwhuge",
   "license": "ISC",
   "devDependencies": {
     "@types/jest": "^26.0.0",

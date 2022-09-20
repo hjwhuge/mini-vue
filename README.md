@@ -1,22 +1,26 @@
 # mini-vue
 
-use learn vue
+实现最简 vue3 模型，用于学习
 
-## Getting started
+### build
 
-Clone this repository and install its dependencies:
-
-```bash
-git clone https://github.com/hjwhuge/mini-vue.git
-cd mini-vue
-npm install
+```shell
+yarn build
 ```
 
-## scripts
+### example
 
-- `npm run build` builds the library to `lib`.
-- `npm run test` use `jest` to test the source files.
+直接打开 example/index.html 即可
 
-## License
+### tasking
 
-[MIT](LICENSE)
+- [ ] runtime-core 初始化逻辑
+  - [ ] 基础类型的处理：static fragment comment
+  - [ ] 触发各种 hook
+  - [ ] 标准化 vnode 的实现
+  - [ ] 初始化 props 逻辑
+  - [ ] 初始化 slots 逻辑
+  - [ ] proxy 暴露给用户的代理实现
+  - [ ] 支持 template
+  - [ ] 给元素设置 props
+    - [ ] 需要过滤掉 vue 自身用的 key
