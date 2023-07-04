@@ -1,0 +1,23 @@
+{
+  "name": "mini-vue",
+  "version": "1.0.0",
+  "description": "",
+  "author": "hjwhuge",
+  "license": "ISC",
+  "keywords": [
+    "mini-vue"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "test": "vitest",
+    "test:run": "vitest --run"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.39.7",
+    "eslint": "^8.44.0",
+    "typescript": "^5.1.6",
+    "vitest": "^0.32.4"
+  }
+}
