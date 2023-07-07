@@ -16,6 +16,8 @@ export class ReactiveEffect {
 export function effect(fn) {
   const _effect = new ReactiveEffect(fn)
   _effect.run()
+
+  return fn
 }
 
 // target -> key -> dep
