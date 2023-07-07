@@ -1,5 +1,23 @@
 let activeEffect
 
+export class ReactiveEffect {
+  private _fn
+  constructor(fn) {
+    this._fn = fn // constructor内定义的方法和属性是实例对象自己的，
+  }
+
+  run() {
+    activeEffect = this._fn // Set this as the activeEffect
+    this._fn() // Run it
+    activeEffect = null // Unset it
+  }
+}
+
+export function effect(fn) {
+  const _effect = new ReactiveEffect(fn)
+  _effect.run()
+}
+
 // target -> key -> dep
 const targetMap = new WeakMap()
 export function track(target, key) {
@@ -32,10 +50,4 @@ export function trigger(target, key) {
       effect()
     })
   }
-}
-
-export function effect(eff) {
-  activeEffect = eff // Set this as the activeEffect
-  activeEffect() // Run it
-  activeEffect = null // Unset it
 }
